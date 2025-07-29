@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotless Clean - Your Local Laundry & Ironing Service</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for demonstration purposes, though Tailwind is preferred */
+        .service-card {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-bg-hero {
+            background: linear-gradient(135deg, #4F46E5 0%, #6366F1 50%, #818CF8 100%);
+        }
+        .price-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .price-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .step-circle {
+            background-color: #6366F1; /* Primary indigo */
+            background-image: linear-gradient(45deg, #4F46E5, #6366F1);
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+        .step-item:hover .step-circle {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px -5px rgba(99, 102, 241, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg py-4 px-6 md:px-12 fixed w-full z-10 rounded-b-2xl">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-indigo-700 tracking-tight transition duration-300 hover:text-indigo-800">Spotless Clean</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 font-semibold text-lg p-2 rounded-lg transition duration-300">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-indigo-600 font-semibold text-lg p-2 rounded-lg transition duration-300">Services</a>
+                <a href="#pricing" class="text-gray-700 hover:text-indigo-600 font-semibold text-lg p-2 rounded-lg transition duration-300">Pricing</a>
+                <a href="#how-it-works" class="text-gray-700 hover:text-indigo-600 font-semibold text-lg p-2 rounded-lg transition duration-300">How It Works</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-semibold text-lg p-2 rounded-lg transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 rounded-b-lg">
+            <a href="#home" class="block text-gray-700 hover:bg-indigo-50 px-6 py-3 rounded-md transition duration-300 text-lg font-medium">Home</a>
+            <a href="#services" class="block text-gray-700 hover:bg-indigo-50 px-6 py-3 rounded-md transition duration-300 text-lg font-medium">Services</a>
+            <a href="#pricing" class="block text-gray-700 hover:bg-indigo-50 px-6 py-3 rounded-md transition duration-300 text-lg font-medium">Pricing</a>
+            <a href="#how-it-works" class="block text-gray-700 hover:bg-indigo-50 px-6 py-3 rounded-md transition duration-300 text-lg font-medium">How It Works</a>
+            <a href="#contact" class="block text-gray-700 hover:bg-indigo-50 px-6 py-3 rounded-md transition duration-300 text-lg font-medium">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-24 md:pt-28">
+        <!-- Hero Section -->
+        <section id="home" class="gradient-bg-hero text-white py-24 px-6 text-center rounded-b-[4rem] shadow-2xl overflow-hidden">
+            <div class="container mx-auto max-w-5xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down drop-shadow-lg">
+                    Sparkling Clean, Effortlessly Done!
+                </h1>
+                <p class="text-lg md:text-2xl mb-10 opacity-95 animate-fade-in font-light">
+                    Your premium laundry & ironing solution in Kompally. Fresh clothes, delivered right to your door.
+                </p>
+                <a href="#contact" class="bg-white text-indigo-700 hover:bg-indigo-100 font-extrabold py-4 px-10 rounded-full shadow-xl transition duration-300 transform hover:scale-105 inline-block text-lg">
+                    Schedule Your First Pickup
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 px-6 bg-white shadow-2xl mx-auto container max-w-7xl rounded-3xl -mt-16 relative z-[5]">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">Our Exceptional Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="service-card bg-white p-10 rounded-2xl text-center border border-indigo-100 flex flex-col items-center">
+                    <img src="https://placehold.co/120x120/7C3AED/ffffff?text=Wash" alt="Wash & Fold Icon" class="mx-auto mb-8 w-32 h-32 rounded-full shadow-lg border-4 border-indigo-200 p-2 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-bold text-indigo-800 mb-4">Premium Wash & Fold</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed">Experience hassle-free laundry. We wash, dry, and meticulously fold your everyday garments, ensuring they are fresh and ready to wear.</p>
+                </div>
+                <div class="service-card bg-white p-10 rounded-2xl text-center border border-indigo-100 flex flex-col items-center">
+                    <img src="https://placehold.co/120x120/7C3AED/ffffff?text=Iron" alt="Ironing Icon" class="mx-auto mb-8 w-32 h-32 rounded-full shadow-lg border-4 border-indigo-200 p-2 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-bold text-indigo-800 mb-4">Expert Ironing Service</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed">Say goodbye to wrinkles! Our professional ironing service ensures your clothes are impeccably crisp and perfectly pressed every time.</p>
+                </div>
+                <div class="service-card bg-white p-10 rounded-2xl text-center border border-indigo-100 flex flex-col items-center">
+                    <img src="https://placehold.co/120x120/7C3AED/ffffff?text=Care" alt="Special Care Icon" class="mx-auto mb-8 w-32 h-32 rounded-full shadow-lg border-4 border-indigo-200 p-2 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-bold text-indigo-800 mb-4">Delicate & Dry Cleaning</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed">For your delicate garments and dry-clean-only items, trust our specialized care. We use gentle processes to preserve fabric quality and color.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 px-6 bg-gray-50">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">Our Transparent Pricing</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="price-card bg-white p-10 rounded-2xl border border-gray-200 hover:border-indigo-300">
+                        <h3 class="text-3xl font-bold mb-5 text-indigo-700">Wash & Fold</h3>
+                        <ul class="list-none text-gray-700 space-y-4 text-lg">
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Clothes:</strong> ₹70 per KG</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Bed Sheets:</strong> ₹100 per piece</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Towels:</strong> ₹50 per piece</li>
+                        </ul>
+                        <p class="mt-8 text-md text-gray-600 font-medium">Minimum order value: <span class="text-indigo-600 font-semibold">₹200</span></p>
+                    </div>
+                    <div class="price-card bg-white p-10 rounded-2xl border border-gray-200 hover:border-indigo-300">
+                        <h3 class="text-3xl font-bold mb-5 text-indigo-700">Professional Ironing</h3>
+                        <ul class="list-none text-gray-700 space-y-4 text-lg">
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Shirts/Trousers:</strong> ₹20 per piece</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Sarees:</strong> ₹30 per piece</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Bed Sheets:</strong> ₹40 per piece</li>
+                        </ul>
+                        <p class="mt-8 text-md text-gray-600 font-medium">Minimum order value: <span class="text-indigo-600 font-semibold">₹100</span></p>
+                    </div>
+                    <div class="md:col-span-2 price-card bg-white p-10 rounded-2xl border border-gray-200 hover:border-indigo-300">
+                        <h3 class="text-3xl font-bold mb-5 text-indigo-700">Special Care & Dry Cleaning</h3>
+                        <ul class="list-none text-gray-700 space-y-4 text-lg">
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Suits:</strong> Starting from ₹250</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Lehengas/Gowns:</strong> Starting from ₹350</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <strong>Blankets/Comforters:</strong> Starting from ₹200</li>
+                            <li class="text-sm italic text-gray-600 mt-4"> (Prices vary based on fabric and complexity. Please contact us for a custom quote.)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20 px-6 bg-indigo-50">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">Effortless Laundry in 4 Simple Steps</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
+                    <div class="step-item bg-white p-8 rounded-2xl shadow-lg border border-indigo-100 flex flex-col items-center">
+                        <div class="step-circle w-20 h-20 flex items-center justify-center mx-auto rounded-full text-3xl font-bold mb-6 shadow-md">1</div>
+                        <h3 class="text-xl font-bold text-indigo-800 mb-3">Schedule</h3>
+                        <p class="text-gray-700 text-base">Conveniently book your laundry service online or give us a call.</p>
+                    </div>
+                    <div class="step-item bg-white p-8 rounded-2xl shadow-lg border border-indigo-100 flex flex-col items-center">
+                        <div class="step-circle w-20 h-20 flex items-center justify-center mx-auto rounded-full text-3xl font-bold mb-6 shadow-md">2</div>
+                        <h3 class="text-xl font-bold text-indigo-800 mb-3">Pickup</h3>
+                        <p class="text-gray-700 text-base">Our friendly team will collect your laundry directly from your doorstep at your preferred time.</p>
+                    </div>
+                    <div class="step-item bg-white p-8 rounded-2xl shadow-lg border border-indigo-100 flex flex-col items-center">
+                        <div class="step-circle w-20 h-20 flex items-center justify-center mx-auto rounded-full text-3xl font-bold mb-6 shadow-md">3</div>
+                        <h3 class="text-xl font-bold text-indigo-800 mb-3">Clean & Care</h3>
+                        <p class="text-gray-700 text-base">We wash, iron, or dry clean your garments with the utmost professional care and attention to detail.</p>
+                    </div>
+                    <div class="step-item bg-white p-8 rounded-2xl shadow-lg border border-indigo-100 flex flex-col items-center">
+                        <div class="step-circle w-20 h-20 flex items-center justify-center mx-auto rounded-full text-3xl font-bold mb-6 shadow-md">4</div>
+                        <h3 class="text-xl font-bold text-indigo-800 mb-3">Deliver</h3>
+                        <p class="text-gray-700 text-base">Receive your fresh, spotless, and neatly folded or ironed clothes back at your home.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action (Repeat from Hero for emphasis) -->
+        <section class="py-16 px-6 bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-center rounded-3xl mx-auto container max-w-7xl my-10 shadow-xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready for Spotless Clothes?</h2>
+            <p class="text-lg md:text-xl mb-8 opacity-90">Experience the convenience of professional laundry service.</p>
+            <a href="#contact" class="bg-white text-indigo-700 hover:bg-indigo-100 font-extrabold py-4 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block text-lg">
+                Book Your Service Now
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 bg-white shadow-2xl mx-auto container max-w-7xl rounded-3xl my-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">Get In Touch With Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-indigo-700">Contact Details</h3>
+                    <p class="text-gray-700 mb-4 text-lg"><strong>Phone:</strong> <a href="tel:+919876543210" class="text-indigo-600 hover:text-indigo-800 hover:underline transition duration-300 text-xl font-medium">+91 7382028070</a></p>
+                    <p class="text-gray-700 mb-4 text-lg"><strong>Email:</strong> <a href="mailto:info@spotlessclean.in" class="text-indigo-600 hover:text-indigo-800 hover:underline transition duration-300 text-xl font-medium">durgarao41@gmail.com</a></p>
+                    <p class="text-gray-700 mb-4 text-lg"><strong>Address:</strong> Kompally, Hyderabad - 500055</p>
+                    <p class="text-indigo-700 mt-8 text-xl font-semibold">Operating Hours:</p>
+                    <p class="text-gray-700 text-lg">6:00 AM - 10:00 AM & 8:00 PM - 10:00 PM</p>
+                    <p class="text-gray-700 text-lg">(Monday - Saturday)</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-indigo-700">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-semibold mb-2 text-lg">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-3 focus:ring-indigo-400 text-lg" placeholder="Enter your full name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2 text-lg">Your Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-3 focus:ring-indigo-400 text-lg" placeholder="your.email@example.com" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-semibold mb-2 text-lg">Message</label>
+                            <textarea id="message" name="message" rows="6" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-3 focus:ring-indigo-400 text-lg" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+                        <button type="submit" class="bg-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-indigo-800 transition duration-300 transform hover:scale-105 text-lg w-full md:w-auto">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-message" class="mt-6 text-center text-base font-semibold"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 px-6 text-center rounded-t-2xl">
+        <div class="container mx-auto">
+            <p class="text-lg mb-4">&copy; 2025 Spotless Clean. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-300 text-lg">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-300 text-lg">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-300 text-lg">Twitter</a>
+            </div>
+            <p class="text-sm text-gray-500 mt-8">Designed with care by Gemini AI</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple form submission (no backend, just a message)
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formMessage.classList.remove('text-red-600', 'text-green-600');
+            formMessage.textContent = 'Sending message...';
+            formMessage.classList.add('text-indigo-600');
+
+            setTimeout(() => {
+                formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                formMessage.classList.remove('text-indigo-600');
+                formMessage.classList.add('text-green-600');
+                contactForm.reset();
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
